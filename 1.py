@@ -45,7 +45,6 @@ def stock_numbers(mode, csv=CSV1):
 def start_scraping():
     for strMode in AVAILABLE_MODES:
         stock_numbers(strMode)
-        break
 
 
 if __name__ == "__main__":
