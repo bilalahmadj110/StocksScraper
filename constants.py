@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 import time
 import pytz
+
 tz = pytz.timezone('Asia/Taipei')
 
 now = datetime.now(tz=tz)
@@ -19,7 +20,7 @@ CSV2 = "trading-exchange.csv"
 KEEP_ONLY_2 = ("證券代號", "收盤價",)
 
 """ SCRAPER 3"""
-today3 = now.strftime("111/%m/%d")
+today3 = now.strftime(f"{now.year - 1911}/%m/%d")
 URL3 = f"https://www.tpex.org.tw/web/stock/aftertrading/otc_quotes_no1430/stk_wn1430_result.php?l=zh-tw&d={today3}&se=EW&_={timestamp}"
 CSV3 = "stock-after-trading.csv"
 KEEP_ONLY_3 = (0, 2,)
