@@ -23,7 +23,7 @@ def stock_numbers(mode, csv=CSV1):
         df = df[2:].reset_index().rename(columns=df.iloc[0])
         del df['index']
         # df.columns = df.iloc[0]
-        log(SCRAPPER, "Filtering columns", 0)
+        log(SCRAPPER, "xFiltering columns", 0)
         #
         # keeping only the necessary columns and deleting all others
         for col in df.columns:

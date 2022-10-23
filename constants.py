@@ -6,7 +6,7 @@ CURRENT_WORKING_DIRECTORY = r"C:\Users\Bilal Ahmad"
 tz = pytz.timezone('Asia/Taipei')
 
 now = datetime.now(tz=tz)
-timestamp = int(datetime.timestamp(now) * 1000)
+timestamp = int(datetime.timestamp(now))
 
 """ SCRAPER 1 """
 AVAILABLE_MODES = [2, 4]
@@ -31,3 +31,10 @@ URL4_MAIN = "https://mops.twse.com.tw"
 URL4 = "https://mops.twse.com.tw/mops/web/t203sb01"
 INPUT_TXT = '//*[@id="co_id"]'
 RESP_TABLE = '//*[@id="fm1"]'
+
+""" SCRAPER 5 """
+URL5_MAIN = "https://mops.twse.com.tw"
+URL5 = "https://mops.twse.com.tw/mops/web/ajax_t21sc04_ifrs"
+CLICK_ME_MAIN = "請點選這裡"
+CATEGORIES5 = ['otc0', "sii0"]
+CSV_DOWNLOAD_5 = 'https://mops.twse.com.tw/server-java/FileDownLoad'
