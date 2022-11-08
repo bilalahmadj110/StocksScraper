@@ -12,7 +12,8 @@ class StockRevenue:
                'Accept-Encoding': 'gzip, deflate, br',
                'Sec-Fetch-Site': 'same-origin', 'Host': 'mops.twse.com.tw',
                'Accept': '*/*',
-               'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
+               'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                             'Chrome/106.0.0.0 Safari/537.36',
                'Connection': 'keep-alive',
                'Sec-Fetch-Mode': 'cors',
                'sec-ch-ua-platform': '"Windows"', 'sec-ch-ua-mobile': '?0',
@@ -125,7 +126,8 @@ class StockRevenue:
         except (AttributeError, ValueError, IndexError):
             return None
 
-    def gen_body_csv(self, name, s_content):
+    @staticmethod
+    def gen_body_csv(name, s_content):
         log(SCRAPPER, f"  Generating body for csv request.", 0)
         soup = BeautifulSoup(s_content, 'html.parser')
         form = soup.find('form', {"action": "/server-java/FileDownLoad"})

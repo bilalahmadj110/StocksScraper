@@ -38,3 +38,10 @@ URL5 = "https://mops.twse.com.tw/mops/web/ajax_t21sc04_ifrs"
 CLICK_ME_MAIN = "請點選這裡"
 CATEGORIES5 = ['otc0', "sii0"]
 CSV_DOWNLOAD_5 = 'https://mops.twse.com.tw/server-java/FileDownLoad'
+
+""" SCRAPER 6"""
+URL6 = "https://www.tdcc.com.tw/portal/zh/smWeb/qryStock"
+DATE_PATH6 = '//*[@id="scaDate"]'
+STOCK_PATH6 = '//*[@id="StockNo"]'
+TABLE6 = 'table-frame securities-overview m-t-20'
+LINK6 = "下載股權分散表.csv"
