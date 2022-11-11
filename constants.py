@@ -45,3 +45,6 @@ DATE_PATH6 = '//*[@id="scaDate"]'
 STOCK_PATH6 = '//*[@id="StockNo"]'
 TABLE6 = 'table-frame securities-overview m-t-20'
 LINK6 = "下載股權分散表.csv"
+
+""" SCRAPER 7 """
+URL7 = "https://mops.twse.com.tw/mops/web/ajax_stapap1"

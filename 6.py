@@ -86,6 +86,15 @@ class ScrapeHoldings:
         log(SCRAPPER, "  Table retrieved")
         df.to_csv(f"scrape_holding_table_{self.stock_num}_{self.date}", index=False, encoding="utf_8_sig")
 
+    def mkdirs(self, stock_num):
+        if not os.path.exists("ScrapeHoldings"):
+            os.mkdir("ScrapeHoldings")
+        if not os.path.exists(os.path.join("ScrapeHoldings", str(stock_num))):
+            os.mkdir(os.path.join("ScrapeHoldings", str(stock_num)))
+        if not os.path.exists(os.path.join("ScrapeHoldings", str(stock_num))):
+            os.mkdir(os.path.join("ScrapeHoldings", str(stock_num)))
+
+
     def download_csv(self, src):
         log(SCRAPPER, "  Scraping csv link")
         soup = BeautifulSoup(src, 'html.parser')
@@ -98,5 +107,7 @@ class ScrapeHoldings:
 
 if __name__ == '__main__':
     ScrapeHoldings().scrape("1101", "20220624")
-    driver.quit()
-
+    try:
+        driver.quit()
+    except:
+        pass
